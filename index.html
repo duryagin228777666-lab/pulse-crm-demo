@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pulse CRM — демо</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><span class="logo">P</span><div><b>Pulse CRM</b><small>Сервис записи</small></div></div>
+      <nav id="nav">
+        <button data-view="dashboard" class="active"><i>◎</i>Дашборд</button>
+        <button data-view="schedule"><i>▦</i>Расписание</button>
+        <button data-view="inbox"><i>✉</i>Заявки <span class="badge" id="inboxCount">0</span></button>
+        <button data-view="clients"><i>☺</i>Клиенты</button>
+        <button data-view="settings"><i>⚙</i>Настройки</button>
+      </nav>
+      <div class="side-foot">
+        <button class="ghost" id="themeBtn">◐ Сменить тему</button>
+        <div class="hint"><kbd>N</kbd> новая · <kbd>/</kbd> поиск</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <h1 id="viewTitle">Дашборд</h1>
+        <div class="top-actions">
+          <input id="search" class="search" placeholder="Поиск: имя, телефон, авто, код…" />
+          <button class="primary" id="newBtn">+ Новая запись</button>
+        </div>
+      </header>
+      <section id="view" class="view"></section>
+    </main>
+
+    <aside class="details" id="details"></aside>
+  </div>
+
+  <div class="modal-back" id="modal" hidden><div class="modal" id="modalBody"></div></div>
+  <div class="toasts" id="toasts"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
